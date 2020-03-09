@@ -4,10 +4,10 @@ import numpy as np
 
 winName = 'OpenVINO on Raspberry Pi'
 cv.namedWindow(winName, cv.WINDOW_NORMAL)
-faceDetectionNet = cv.dnn.readNet('face-detection-retail-0004.xml',
-                                  'face-detection-retail-0004.bin')
-emotionNet = cv.dnn.readNet('emotions-recognition-retail-0003.xml',
-                            'emotions-recognition-retail-0003.bin')
+faceDetectionNet = cv.dnn.readNet('models/face-detection-retail-0004.xml',
+                                  'models/face-detection-retail-0004.bin')
+emotionNet = cv.dnn.readNet('models/emotions-recognition-retail-0003.xml',
+                            'models/emotions-recognition-retail-0003.bin')
 faceDetectionNet.setPreferableTarget(cv.dnn.DNN_TARGET_MYRIAD)
 emotionNet.setPreferableTarget(cv.dnn.DNN_TARGET_MYRIAD)
 cap = cv.VideoCapture(0)

@@ -4,10 +4,10 @@ import numpy as np
 
 winName = 'OpenVINO on Raspberry Pi'
 cv.namedWindow(winName, cv.WINDOW_NORMAL)
-faceDetectionNet = cv.dnn.readNet('face-detection-retail-0004.xml',
-                                  'face-detection-retail-0004.bin')
-landmarkNet = cv.dnn.readNet('facial-landmarks-35-adas-0002.xml',
-                             'facial-landmarks-35-adas-0002.bin')
+faceDetectionNet = cv.dnn.readNet('models/face-detection-retail-0004.xml',
+                                  'models/face-detection-retail-0004.bin')
+landmarkNet = cv.dnn.readNet('models/facial-landmarks-35-adas-0002.xml',
+                             'models/facial-landmarks-35-adas-0002.bin')
 faceDetectionNet.setPreferableTarget(cv.dnn.DNN_TARGET_MYRIAD)
 landmarkNet.setPreferableTarget(cv.dnn.DNN_TARGET_MYRIAD)
 cap = cv.VideoCapture(0)

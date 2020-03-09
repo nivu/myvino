@@ -2,10 +2,10 @@ import cv2 as cv
 from math import cos, sin, pi
 winName = 'OpenVINO on Raspberry Pi'
 cv.namedWindow(winName, cv.WINDOW_NORMAL)
-faceDetectionNet = cv.dnn.readNet('face-detection-retail-0004.xml',
-                                  'face-detection-retail-0004.bin')
-headPoseNet = cv.dnn.readNet('head-pose-estimation-adas-0001.xml',
-                             'head-pose-estimation-adas-0001.bin')
+faceDetectionNet = cv.dnn.readNet('models/face-detection-retail-0004.xml',
+                                  'models/face-detection-retail-0004.bin')
+headPoseNet = cv.dnn.readNet('models/head-pose-estimation-adas-0001.xml',
+                             'models/head-pose-estimation-adas-0001.bin')
 faceDetectionNet.setPreferableTarget(cv.dnn.DNN_TARGET_MYRIAD)
 headPoseNet.setPreferableTarget(cv.dnn.DNN_TARGET_MYRIAD)
 cap = cv.VideoCapture(0)
